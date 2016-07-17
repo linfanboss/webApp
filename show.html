@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=640,user-scalable=no">
+	<title>婚纱摄影-婚纱摄影前十名-婚纱影楼-厦门拍婚纱照-大城小爱婚纱摄影官方网站</title>
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/application.css" rel="stylesheet">
+    <style>
+        .pagination{
+            padding:20px 0 80px 0;
+        }
+        .pagination li{
+            display:inline-block;
+        }
+        .pagination li a{
+            display:inline-block;
+            padding:8px 15px;
+            color:#666;
+            border:1px solid #eee;
+            background-color:rgba(255,255,255,.6);
+            border-radius:3px
+        }
+    </style>
+</head>
+<body>
+
+	<article>
+        <header>
+            <a href="index.html" class="log">
+                <img src="image/logo.png" alt="logo">
+            </a>
+            大城小爱婚纱摄影
+            <span><a href="index.html"></a></span>
+        </header>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="image/gd1.jpg"></div>
+                <div class="swiper-slide"><img src="image/gd2.jpg"></div>
+                <div class="swiper-slide"><img src="image/gd3.jpg"></div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+
+            <!-- 如果需要导航按钮 -->
+            <!--<div class="swiper-button-prev"></div>-->
+            <!--<div class="swiper-button-next"></div>-->
+
+            <!-- 如果需要滚动条 -->
+            <!--<div class="swiper-scrollbar"></div>-->
+        </div>
+        <nav class="navbar">
+            <a href="index.html" >首页</a>
+            <a href="show.html" class="active">客照欣赏</a>
+            <a href="style.html" >风格展示</a>
+            <a href="star.html" >人气活动</a>
+        </nav>
+
+        <section id="customer">
+            <div class="m-photo-main">
+                <dl>
+                    <dd>
+                        <!--客照名称自定义-->
+                        <a href="#">
+                            <img  style="background-image:url(image/showImg/show1.jpg)">
+                            <span>Mr康&amp;Miss乔</span>
+                        </a>
+                    </dd>
+
+                    <dd>
+                        <!--客照名称自定义-->
+                        <a href="#">
+                            <img style="background-image:url(image/showImg/show2.jpg)">
+                            <span>Mr洪&amp;Miss黄</span>
+                        </a>
+                    </dd>
+
+                    <dd>
+                        <!--客照名称自定义-->
+                        <a href="#">
+                            <img  style="background-image:url(image/showImg/show3.jpg)">
+                            <span>Mr施&amp;Miss武</span>
+                        </a>
+                    </dd>
+
+                    <dd>
+                        <!--客照名称自定义-->
+                        <a href="#">
+                            <img   style="background-image:url(image/showImg/show4.jpg)">
+                            <span>Mr姬&amp;Miss王</span>
+                        </a>
+                    </dd>
+
+                    <dd>
+                        <!--客照名称自定义-->
+                        <a href="#">
+                            <img  style="background-image:url(image/showImg/show5.jpg)">
+                            <span>Mr林&amp;Miss陈</span>
+                        </a>
+                    </dd>
+
+                    <dd>
+                        <!--客照名称自定义-->
+                        <a href="#">
+                            <img style="background-image:url(image/showImg/show6.jpg)">
+                            <span>Mr郑&amp;Miss郑</span>
+                        </a>
+                    </dd>
+
+                    <dd>
+                        <!--客照名称自定义-->
+                        <a href="#">
+                            <img  style="background-image:url(image/showImg/show7.jpg)">
+                            <span>Mr陈&amp;Miss张</span>
+                        </a>
+                    </dd>
+
+                    <dd>
+                        <!--客照名称自定义-->
+                        <a href="#">
+                            <img style="background-image:url(image/showImg/show8.jpg)">
+                            <span>Mr景&amp;Miss杨</span>
+                        </a>
+                    </dd>
+
+                </dl>
+                <div style="text-align:center"><ul class="pagination">   <li><a href="#" class="next">NEXT &gt;</a></li> <li><a href="#" class="end">LAST &gt;&gt;</a></li></ul></div>			</div>
+        </section>
+        <section id="pageDetail">
+        </section>
+        <footer>
+            <nav class="fixed">
+                <a class="call">咨询专线<br>400-0592-002</a>
+                <a class="gift">咨询有礼<br></a>
+            </nav>
+        </footer>
+	</article>
+    <script src="js/swiper.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            loop:true,
+            autoplay: 3000,
+            autoplayDisableOnInteraction:false
+        });
+    </script>
+    <script>
+        var tds = document.getElementsByTagName("td");
+        for(var j=0;j<tds.length-1;j++){
+            var labels = tds[j].getElementsByTagName("label");
+            for(var i=0;i<labels.length;i++){
+                labels[i].index = i;
+                labels[i].addEventListener('touchstart',function(){
+                    var parent = this.parentNode;
+                    var brother = parent.getElementsByTagName('label');
+                    var input = parent.getElementsByTagName('input')[0];
+                    for(var x=0;x<brother.length;x++){
+                        brother[x].className = '';
+                    }
+                    this.className = 'selected';
+                    input.value = this.index;//刷新隐藏的input的value值
+                },false);
+            }
+        }
+    </script>
+    <script>
+//        var pageIndex = document.getElementById('pageIndex');
+//        pageIndex.style.display = 'none';
+//        var pageDetail = document.getElementById("pageDetail");
+//        pageDetail.style.display = 'block';
+    </script>
+</body>
+</html>

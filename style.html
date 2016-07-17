@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=640,user-scalable=no">
+	<title>婚纱摄影-婚纱摄影前十名-婚纱影楼-厦门拍婚纱照-大城小爱婚纱摄影官方网站</title>
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/application.css" rel="stylesheet">
+</head>
+<body>
+
+	<article>
+        <header>
+            <a href="index.html" class="log">
+                <img src="image/logo.png" alt="logo">
+            </a>
+            大城小爱婚纱摄影
+            <span><a href="index.html"></a></span>
+        </header>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="image/gd1.jpg"></div>
+                <div class="swiper-slide"><img src="image/gd2.jpg"></div>
+                <div class="swiper-slide"><img src="image/gd3.jpg"></div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+
+            <!-- 如果需要导航按钮 -->
+            <!--<div class="swiper-button-prev"></div>-->
+            <!--<div class="swiper-button-next"></div>-->
+
+            <!-- 如果需要滚动条 -->
+            <!--<div class="swiper-scrollbar"></div>-->
+        </div>
+        <nav class="navbar">
+            <a href="index.html" >首页</a>
+            <a href="show.html" >客照欣赏</a>
+            <a href="style.html" class="active">风格展示</a>
+            <a href="star.html" >人气活动</a>
+        </nav>
+
+        <section id="customer">
+            <div class="m-photo-main m-scenes">
+
+                <dl>
+                    <dt><a href="#">两相依偎</a></dt>
+                    <dd><a href="#"><img   style="background-image:url(image/styleImg/style1.jpg)"><span>两相依偎</span></a></dd>
+                </dl>
+                <dl>
+                    <dt><a href="#">眉眼如初</a></dt>
+                    <dd><a href="#"><img  style="background-image:url(image/styleImg/style2.jpg)"><span>眉眼如初</span></a></dd>
+                </dl>
+                <dl>
+                    <dt><a href="#">笑靥如花</a></dt>
+                    <dd><a href="#"><img   style="background-image:url(image/styleImg/style3.jpg)"><span>笑靥如花</span></a></dd>
+                </dl>
+                <dl>
+                    <dt><a href="#">爱如夏花</a></dt>
+                    <dd><a href="#"><img  style="background-image:url(image/styleImg/style4.jpg)"><span>爱如夏花</span></a></dd>
+                </dl>
+                <dl>
+                    <dt><a href="#">陌上花开</a></dt>
+                    <dd><a href="#"><img   style="background-image:url(image/styleImg/style5.jpg)"><span>陌上花开</span></a></dd>
+                </dl>
+                <dl>
+                    <dt><a href="#">暮色海湾</a></dt>
+                    <dd><a href="#"><img   style="background-image:url(image/styleImg/style6.jpg)"><span>暮色海湾</span></a></dd>
+                </dl>
+
+            </div>
+        </section>
+        <section id="pageDetail">
+        </section>
+        <footer>
+            <nav class="fixed">
+                <a class="call">咨询专线<br>400-0592-002</a>
+                <a class="gift">咨询有礼<br></a>
+            </nav>
+        </footer>
+	</article>
+    <script src="js/swiper.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            loop:true,
+            autoplay: 3000,
+            autoplayDisableOnInteraction:false
+        });
+    </script>
+    <script>
+        var tds = document.getElementsByTagName("td");
+        for(var j=0;j<tds.length-1;j++){
+            var labels = tds[j].getElementsByTagName("label");
+            for(var i=0;i<labels.length;i++){
+                labels[i].index = i;
+                labels[i].addEventListener('touchstart',function(){
+                    var parent = this.parentNode;
+                    var brother = parent.getElementsByTagName('label');
+                    var input = parent.getElementsByTagName('input')[0];
+                    for(var x=0;x<brother.length;x++){
+                        brother[x].className = '';
+                    }
+                    this.className = 'selected';
+                    input.value = this.index;//刷新隐藏的input的value值
+                },false);
+            }
+        }
+    </script>
+    <script>
+//        var pageIndex = document.getElementById('pageIndex');
+//        pageIndex.style.display = 'none';
+//        var pageDetail = document.getElementById("pageDetail");
+//        pageDetail.style.display = 'block';
+    </script>
+</body>
+</html>
